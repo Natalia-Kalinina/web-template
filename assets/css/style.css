@@ -496,7 +496,6 @@ a {
 
 .btn {
   display: block;
-  width: 250px;
   border: 2px solid #ffffff;
   background-color: rgba(255, 255, 255, 0.1);
   padding: 18px 20px;
@@ -683,6 +682,37 @@ a {
 .header-content__buttons .btn {
   margin-left: 10px;
   margin-right: 10px;
+  width: 250px;
+}
+@media (max-width: 991.8px) and (min-width: 768px) {
+  .header-content__buttons .btn {
+    width: 200px;
+    height: 50px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    letter-spacing: 0.1em;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 767.8px) and (min-width: 576px) {
+  .header-content__buttons .btn {
+    width: 170px;
+    height: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    letter-spacing: 0.05em;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 575.8px) {
+  .header-content__buttons .btn {
+    width: 170px;
+    height: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    letter-spacing: 0.05em;
+    font-size: 1rem;
+  }
 }
 
 .skills {
@@ -704,6 +734,19 @@ a {
     grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9";
   }
 }
+@media (max-width: 767.8px) and (min-width: 576px) {
+  .skills__container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
+  }
+}
+@media (max-width: 575.8px) {
+  .skills__container {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
+  }
+}
+
 .skill-item {
   min-height: calc(33vh - 12px);
   background-color: #2d3651;
@@ -868,5 +911,122 @@ a {
     -ms-grid-row: 9;
     -ms-grid-column: 3;
     -ms-grid-column-span: 3;
+  }
+}
+@media (max-width: 767.8px) and (min-width: 576px) {
+  .skill-item:nth-of-type(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+  .skill-item:nth-of-type(2) {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 3;
+  }
+  .skill-item:nth-of-type(3) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .skill-item:nth-of-type(4) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+  .skill-item:nth-of-type(5) {
+    -ms-grid-row: 7;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+  .skill-item:nth-of-type(6) {
+    -ms-grid-row: 7;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 3;
+  }
+  .skill-item:nth-of-type(7) {
+    -ms-grid-row: 9;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 3;
+  }
+  .skill-item:nth-of-type(8) {
+    -ms-grid-row: 11;
+    -ms-grid-column: 1;
+  }
+  .skill-item:nth-of-type(9) {
+    -ms-grid-row: 11;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+  }
+}
+@media (max-width: 575.8px) {
+  .skill-item:nth-of-type(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+  .skill-item:nth-of-type(2) {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+  }
+  .skill-item:nth-of-type(3) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .skill-item:nth-of-type(4) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+  .skill-item:nth-of-type(5) {
+    -ms-grid-row: 9;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+  .skill-item:nth-of-type(6) {
+    -ms-grid-row: 11;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+  }
+  .skill-item:nth-of-type(7) {
+    -ms-grid-row: 13;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+  }
+  .skill-item:nth-of-type(8) {
+    -ms-grid-row: 15;
+    -ms-grid-column: 1;
+  }
+  .skill-item:nth-of-type(9) {
+    -ms-grid-row: 17;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+}
+
+.skills__button {
+  display: flex;
+  justify-content: center;
+}
+.skills__button .btn-accent {
+  display: block;
+  margin-top: 20px;
+  width: 350px;
+  height: 60px;
+  border: 2px solid #2d3651;
+  background-color: #44596e;
+  padding: 18px 20px;
+  text-align: center;
+  font-size: 1.125rem;
+  transition: background-color 0.5s;
+}
+.skills__button .btn-accent:hover {
+  background-color: #d66926;
+}
+@media (max-width: 575.8px) {
+  .skills__button .btn-accent {
+    width: 100%;
   }
 }

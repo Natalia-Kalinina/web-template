@@ -27,11 +27,37 @@
   &__buttons {
     display: flex;
     justify-content: center;
-
     .btn {
       margin-left: $gap / 2;
       margin-right: $gap / 2;
+      width: 250px;
+
+      @include lg-md {
+        width: 200px;
+        height: 50px;
+        padding-top: 14px;
+        padding-bottom: 14px;
+        letter-spacing: 0.1em;
+        font-size: 1rem;
+        }
+      @include md-sm {
+        width: 170px;
+        height: 40px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        letter-spacing: 0.05em;
+        font-size: 1rem;
+      }
+      @include sm {
+        width: 170px;
+        height: 40px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        letter-spacing: 0.05em;
+        font-size: 1rem;
+        }
+      }
     }
   }
-}
+  
 

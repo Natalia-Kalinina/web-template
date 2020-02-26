@@ -24,8 +24,28 @@
         "a7 a9 a9";
     }
 
-    @include md {
-      // TODO:
+    @include md-sm {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:
+        "a1 a2"
+        "a3 a2"
+        "a4 a4"
+        "a5 a6"
+        "a5 a7"
+        "a8 a9";
+    }
+    @include sm {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-areas:
+        "a1"
+        "a2"
+        "a3"
+        "a4"
+        "a5"
+        "a6"
+        "a7"
+        "a8"
+        "a9";
     }
   }
 }
@@ -116,3 +136,28 @@
     grid-area: a9;
   }
 }
+.skills__button {
+  display: flex;
+  justify-content: center;
+  .btn-accent {
+    display: block;
+    margin-top: $gap;
+    width: 350px;
+    height: 60px;
+    border: 2px solid $color-primary;
+    background-color: $color-gray-dark;
+    padding: 18px $gap;
+    text-align: center;
+    font-size: 1.125rem;
+    transition: background-color 0.5s;
+
+    &:hover {
+      background-color: $color-accent;
+    }
+    @include sm {
+      width: 100%;
+    }
+  }
+
+}
+
