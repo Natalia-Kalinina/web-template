@@ -1,0 +1,40 @@
+.about {
+    padding: 80px 0 50px ;
+    background-color: $color-gray-light;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        @extend %container 
+    }
+    &__column-content {
+    }
+    &__column-image {
+        padding: 0 0 0 50px;
+        img {
+          width: 271px;
+          margin-top: $gap;
+        }
+}
+    &__text {
+        padding: 0 50px 0 0;
+        width: 100%;
+        font-size: 1.125rem;
+        letter-spacing: 0.055em;
+        position: relative;
+        &::after {
+            content:'';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 1.3px;
+            height: 200px;
+            background-color: rgba($color-gray, 0.1);
+        }
+    }
+    &__title {
+        font-size: 2.5rem;
+        letter-spacing: 0.1em;
+        line-height: 1.2em;
+        margin-bottom: 56px
+    }
+}

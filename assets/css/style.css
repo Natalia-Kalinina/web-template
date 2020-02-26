@@ -457,7 +457,7 @@ template {
 /* sm */
 /* xs */
 /* xx */
-.header-content__container, .header-menu__container {
+.about__container, .header-content__container, .header-menu__container {
   max-width: 1340px;
   margin: 0 auto;
   padding-left: 20px;
@@ -1029,4 +1029,42 @@ a {
   .skills__button .btn-accent {
     width: 100%;
   }
+}
+
+.about {
+  padding: 80px 0 50px;
+  background-color: #e5e5e5;
+}
+.about__container {
+  display: flex;
+  justify-content: space-between;
+}
+.about__column-image {
+  padding: 0 0 0 50px;
+}
+.about__column-image img {
+  width: 271px;
+  margin-top: 20px;
+}
+.about__text {
+  padding: 0 50px 0 0;
+  width: 100%;
+  font-size: 1.125rem;
+  letter-spacing: 0.055em;
+  position: relative;
+}
+.about__text::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1.3px;
+  height: 200px;
+  background-color: rgba(99, 117, 136, 0.1);
+}
+.about__title {
+  font-size: 2.5rem;
+  letter-spacing: 0.1em;
+  line-height: 1.2em;
+  margin-bottom: 56px;
 }
