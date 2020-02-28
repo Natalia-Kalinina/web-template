@@ -669,20 +669,38 @@ a {
     margin: 0 0 43px;
   }
 }
-@media (max-width: 767.8px) {
+@media (max-width: 767.8px) and (min-width: 576px) {
   .header-content__title {
     font-size: 1.875rem;
     margin: 0 0 43px;
   }
 }
+@media (max-width: 575.8px) {
+  .header-content__title {
+    font-size: 1.875rem;
+    margin: 0 0 43px;
+  }
+}
+@media (max-width: 440px) {
+  .header-content__title {
+    font-size: 1.5rem;
+    margin: 0 0 43px;
+  }
+}
 .header-content__buttons {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 .header-content__buttons .btn {
   margin-left: 10px;
   margin-right: 10px;
   width: 250px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+.header-content__buttons .btn:last-child {
+  margin-bottom: 0;
 }
 @media (max-width: 991.8px) and (min-width: 768px) {
   .header-content__buttons .btn {
