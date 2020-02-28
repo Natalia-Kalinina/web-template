@@ -4,15 +4,37 @@
     &__container {
         display: flex;
         justify-content: space-between;
-        @extend %container 
+        @extend %container; 
+
+        @include sm {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
     }
-    &__column-content {
-    }
+}
     &__column-image {
         padding: 0 0 0 50px;
+
         img {
           width: 271px;
           margin-top: $gap;
+
+          @include md-sm {
+            width: 240px;
+            height: 440px;
+            margin-top: -10px;
+          }
+        }
+        @include lg-md {
+            padding: 0 0 0 17px;
+            margin-top: -5px;
+        }
+        @include sm {
+            padding-left: 30px;
+            margin-top: -60px;
+        }
+        @media (max-width: 440px) {
+            padding-left: 10px;
         }
 }
     &__text {
@@ -21,6 +43,31 @@
         font-size: 1.125rem;
         letter-spacing: 0.055em;
         position: relative;
+
+        @include lg-md {
+             p:nth-child(4) {
+            display: none; 
+            }
+        } 
+        @include md-sm {
+             p:nth-child(4) {
+                display: none; 
+                }
+             p:nth-child(3) {
+                display: none; 
+            }
+            font-size: 1rem;
+            letter-spacing: 0.8px;
+        } 
+        @include sm {
+            font-size: 1rem;
+            letter-spacing: 0.8px;
+            padding: 0;
+            margin: 0 0 40px;
+            &::after {
+                display: none;
+            }
+        }
         &::after {
             content:'';
             position: absolute;
@@ -28,13 +75,34 @@
             right: 0;
             width: 1.3px;
             height: 200px;
-            background-color: rgba($color-gray, 0.1);
+            background-color: rgba($color-gray, 0.2);
         }
     }
     &__title {
         font-size: 2.5rem;
         letter-spacing: 0.1em;
         line-height: 1.2em;
-        margin-bottom: 56px
+        margin-bottom: 56px;
+        
+        @include lg-md {
+            font-size: 2rem;
+            margin-bottom: 42px;
+        }
+        @include md-sm {
+            font-size: 1.5rem;
+            margin-bottom: 36px;
+            font-size: 1.5rem;
+            max-width: 220px;
+            letter-spacing: 2.4px;
+            line-height: 32px;
+            
+        }
+        @include sm {
+            text-align: center;
+            margin: 0 auto 21px;
+            font-size: 1.5rem;
+            letter-spacing: 2.4px;
+            line-height: 32px;
+        }
     }
 }

@@ -736,6 +736,11 @@ a {
 .skills {
   padding: 10px 10px 40px;
 }
+@media (max-width: 575.8px) {
+  .skills {
+    padding: 20px;
+  }
+}
 .skills__container {
   display: grid;
   grid-gap: 10px;
@@ -1057,12 +1062,43 @@ a {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 575.8px) {
+  .about__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
 .about__column-image {
   padding: 0 0 0 50px;
 }
 .about__column-image img {
   width: 271px;
   margin-top: 20px;
+}
+@media (max-width: 767.8px) and (min-width: 576px) {
+  .about__column-image img {
+    width: 240px;
+    height: 440px;
+    margin-top: -10px;
+  }
+}
+@media (max-width: 991.8px) and (min-width: 768px) {
+  .about__column-image {
+    padding: 0 0 0 17px;
+    margin-top: -5px;
+  }
+}
+@media (max-width: 575.8px) {
+  .about__column-image {
+    padding-left: 30px;
+    margin-top: -60px;
+  }
+}
+@media (max-width: 440px) {
+  .about__column-image {
+    padding-left: 10px;
+  }
 }
 .about__text {
   padding: 0 50px 0 0;
@@ -1071,6 +1107,34 @@ a {
   letter-spacing: 0.055em;
   position: relative;
 }
+@media (max-width: 991.8px) and (min-width: 768px) {
+  .about__text p:nth-child(4) {
+    display: none;
+  }
+}
+@media (max-width: 767.8px) and (min-width: 576px) {
+  .about__text {
+    font-size: 1rem;
+    letter-spacing: 0.8px;
+  }
+  .about__text p:nth-child(4) {
+    display: none;
+  }
+  .about__text p:nth-child(3) {
+    display: none;
+  }
+}
+@media (max-width: 575.8px) {
+  .about__text {
+    font-size: 1rem;
+    letter-spacing: 0.8px;
+    padding: 0;
+    margin: 0 0 40px;
+  }
+  .about__text::after {
+    display: none;
+  }
+}
 .about__text::after {
   content: "";
   position: absolute;
@@ -1078,11 +1142,36 @@ a {
   right: 0;
   width: 1.3px;
   height: 200px;
-  background-color: rgba(99, 117, 136, 0.1);
+  background-color: rgba(99, 117, 136, 0.2);
 }
 .about__title {
   font-size: 2.5rem;
   letter-spacing: 0.1em;
   line-height: 1.2em;
   margin-bottom: 56px;
+}
+@media (max-width: 991.8px) and (min-width: 768px) {
+  .about__title {
+    font-size: 2rem;
+    margin-bottom: 42px;
+  }
+}
+@media (max-width: 767.8px) and (min-width: 576px) {
+  .about__title {
+    font-size: 1.5rem;
+    margin-bottom: 36px;
+    font-size: 1.5rem;
+    max-width: 220px;
+    letter-spacing: 2.4px;
+    line-height: 32px;
+  }
+}
+@media (max-width: 575.8px) {
+  .about__title {
+    text-align: center;
+    margin: 0 auto 21px;
+    font-size: 1.5rem;
+    letter-spacing: 2.4px;
+    line-height: 32px;
+  }
 }
