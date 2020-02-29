@@ -1,0 +1,34 @@
+.form {
+    padding: 20px 0;
+    background-color: $color-primary;
+
+    &__form {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -20px;
+    }
+    &__container {
+
+        @extend %container;
+    }
+
+    &__item {
+        flex: 0 1 33.33%;
+        padding: 0 10px;
+    }
+    &__user-name,
+    &__user-email,
+    &__button {
+        width: 100%;
+        padding: 20px 40px;
+        background-color: $color-primary;
+        
+    }
+    &__button {
+        color: $color-light;
+        &:hover {
+            border: 2px solid $color-light;
+            background-color: $color-accent;
+          }
+    }
+}
