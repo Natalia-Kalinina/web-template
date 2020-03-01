@@ -26,15 +26,9 @@ h2 {
 h3 {
 }
 
-p {
-}
-
 a {
   color: $color-light;
   text-decoration: none;
-}
-
-input:focus {
 }
 
 .btn {
@@ -50,4 +44,8 @@ input:focus {
   &:focus {
     background-color: $color-accent;
   }
+}
+input:focus {
+  outline: none;
+  color: $color-light;
 }

@@ -507,6 +507,11 @@ a {
   background-color: #d66926;
 }
 
+input:focus {
+  outline: none;
+  color: #ffffff;
+}
+
 .header {
   position: relative;
   min-height: 100vh;
@@ -1177,27 +1182,82 @@ a {
 }
 
 .form {
-  padding: 20px 0;
+  padding: 30px 0;
   background-color: #2d3651;
+}
+@media (max-width: 991.8px) and (min-width: 576px) {
+  .form {
+    padding: 20px 0;
+  }
+}
+@media (max-width: 575.8px) {
+  .form {
+    padding: 20px 0;
+  }
 }
 .form__form {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -20px;
+  margin: 0 -10px;
 }
 .form__item {
   flex: 0 1 33.33%;
   padding: 0 10px;
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 1.8px;
 }
-.form__user-name, .form__user-email, .form__button {
+@media (max-width: 575.8px) {
+  .form__item {
+    flex: 0 1 100%;
+  }
+}
+@media (max-width: 767.8px) and (min-width: 576px) {
+  .form__item:nth-child(1) {
+    flex: 0 1 100%;
+    margin: 0 0 20px;
+  }
+}
+@media (max-width: 767.8px) and (min-width: 576px) {
+  .form__item:nth-child(2), .form__item:nth-child(3) {
+    flex-grow: 1;
+  }
+}
+@media (max-width: 575.8px) {
+  .form__item:nth-child(1), .form__item:nth-child(2) {
+    margin: 0 0 20px;
+  }
+}
+.form__user-name, .form__user-email {
   width: 100%;
   padding: 20px 40px;
-  background-color: #2d3651;
+  border-width: 2px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) rgba(255, 255, 255, 0.4);
+}
+.form__user-name:hover, .form__user-email:hover {
+  border-color: rgba(255, 255, 255, 0.4) rgba(255, 255, 255, 0.4) white;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition-duration: 0.5s;
+}
+.form__user-name:hover::placeholder, .form__user-email:hover::placeholder {
+  transition-duration: 0.5s;
+  color: rgba(255, 255, 255, 0.6);
+}
+.form__user-name::placeholder, .form__user-email::placeholder {
+  color: rgba(255, 255, 255, 0.3);
 }
 .form__button {
+  width: 100%;
+  padding: 20px 40px;
+  border-width: 2px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) rgba(255, 255, 255, 0.4);
+  border-style: solid;
   color: #ffffff;
 }
 .form__button:hover {
-  border: 2px solid #ffffff;
   background-color: #d66926;
+  border-color: #ffffff;
+  transition-duration: 0.5s;
 }
