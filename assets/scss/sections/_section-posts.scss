@@ -1,0 +1,19 @@
+.posts {
+    &__container {
+        @extend %container;
+    }
+    &__title {
+        letter-spacing: 0.05em;
+        color: $color-gray;
+        font-size: 1.125rem;
+        font-weight: 700;
+        letter-spacing: 0.9px;
+        line-height: 20px;
+    }
+    &__caption {
+        color: $color-gray;
+        font-size: 1.125rem;
+        line-height: 20px;
+        letter-spacing: 0.9px;
+    }
+}
