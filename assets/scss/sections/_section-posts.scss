@@ -3,55 +3,139 @@
         @extend %container;
 
         display: grid;
-        grid-gap: $gap / 2;
+        grid-gap: $gap;
 
         @include lg-min {
             grid-template-columns: repeat(4, 1fr);
             grid-template-areas:
-              "a1 a1 a2 a3"
-              "a4 a5 a6 a6";
+              "b1 b1 b2 b3"
+              "b4 b5 b6 b6";
+          }
+          @include lg-md {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas:
+              "b1 b1 b2"
+              "b3 b4 b4"
+              "b5 b5 b6";
+          }
+          @include md-sm {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+              "b1 b2"
+              "b3 b4"
+              "b5 b6";
+          }
+          @include sm {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-areas:
+              "b1"
+              "b2"
+              "b3"
+              "b4"
+              "b5"
+              "b6";
           }
     }
-    &__title {
-        letter-spacing: 0.05em;
-        color: $color-gray;
-        font-size: 1.125rem;
-        font-weight: 700;
-        letter-spacing: 0.9px;
-        line-height: 20px;
+    &__link {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        color: inherit;
     }
+    &__main-title {
+        max-width: $ul;
+        margin: 0 auto 56px;
+        padding-left: $gap;
+        padding-top: $gap*5;
+        font-size: 2.5rem;
+        line-height: 1.2em;
+        letter-spacing: 0.1em;
+
+        @include lg-md {
+            margin-bottom: 42px;
+            font-size: 2rem; 
+        }
+        @include md-sm {
+            margin-bottom: 36px;
+            font-size: 1.5rem;
+        }
+        @include sm {
+            margin-bottom: 36px;
+            text-align: center;
+            padding-top: 50px;
+            letter-spacing: 2.4px;
+            font-size: 24px;
+        }
+
+    }
+    &__title {
+        font-family: $font-header;
+        font-size: 1.1rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        line-height: 20px;
+      }
     &__item {
+        background-color: $color-gray-light;
+        min-height: 550px;
+        color: $color-gray;
         &:nth-of-type(1) {
-            grid-area: a1;
+            grid-area: b1;
           }
         
           &:nth-of-type(2) {
-            grid-area: a2;
+            grid-area: b2;
           }
         
           &:nth-of-type(3) {
-            grid-area: a3;
+            grid-area: b3;
           }
         
           &:nth-of-type(4) {
-            grid-area: a4;
+            grid-area: b4;
           }
         
           &:nth-of-type(5) {
-            grid-area: a5;
+            grid-area: b5;
           }
         
           &:nth-of-type(6) {
-            grid-area: a6;
+            grid-area: b6;
           } 
+          &:hover {
+            color: $color-primary;
+            background-color: #c3c3c3;
+            transition: 0.5s;
+            .posts__image-itself {
+              transform: scale(1.1);
+            }
+          }
     }
-    &__caption {
-        color: $color-gray;
-        font-size: 1.125rem;
+    &__image {
+        overflow: hidden;
+    }
+    &__image-itself {
+        height: 300px;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        transition: transform 0.5s;
+      }
+      &__content {
+        padding: ($gap / 2) $gap;
+        flex: 1 0 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+      }
+      &__caption {
         line-height: 20px;
         letter-spacing: 0.9px;
-    }
+      }
 }
+
 .posts__button {
     display: flex;
     justify-content: center;
