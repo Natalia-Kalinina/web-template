@@ -1,6 +1,16 @@
 .posts {
     &__container {
         @extend %container;
+
+        display: grid;
+        grid-gap: $gap / 2;
+
+        @include lg-min {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-areas:
+              "a1 a1 a2 a3"
+              "a4 a5 a6 a6";
+          }
     }
     &__title {
         letter-spacing: 0.05em;
@@ -10,6 +20,31 @@
         letter-spacing: 0.9px;
         line-height: 20px;
     }
+    &__item {
+        &:nth-of-type(1) {
+            grid-area: a1;
+          }
+        
+          &:nth-of-type(2) {
+            grid-area: a2;
+          }
+        
+          &:nth-of-type(3) {
+            grid-area: a3;
+          }
+        
+          &:nth-of-type(4) {
+            grid-area: a4;
+          }
+        
+          &:nth-of-type(5) {
+            grid-area: a5;
+          }
+        
+          &:nth-of-type(6) {
+            grid-area: a6;
+          } 
+    }
     &__caption {
         color: $color-gray;
         font-size: 1.125rem;
@@ -17,3 +52,27 @@
         letter-spacing: 0.9px;
     }
 }
+.posts__button {
+    display: flex;
+    justify-content: center;
+    .btn-accent {
+      display: block;
+      margin-top: $gap;
+      width: 350px;
+      height: 60px;
+      border: 2px solid $color-primary;
+      background-color: $color-gray-dark;
+      padding: 18px $gap;
+      text-align: center;
+      font-size: 1.125rem;
+      transition: background-color 0.5s;
+  
+      &:hover {
+        background-color: $color-accent;
+      }
+      @include sm {
+        width: 100%;
+      }
+    }
+  
+  }
