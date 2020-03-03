@@ -1,5 +1,12 @@
 .posts {
     padding-bottom: 100px;
+
+    @include lg-md {
+      padding-bottom: 80px;
+    }
+    @include md {
+      padding-bottom: 60px;
+    }
     &__container {
         @extend %container;
 

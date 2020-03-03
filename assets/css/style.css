@@ -1265,6 +1265,16 @@ input:focus {
 .posts {
   padding-bottom: 100px;
 }
+@media (max-width: 991.8px) and (min-width: 768px) {
+  .posts {
+    padding-bottom: 80px;
+  }
+}
+@media (max-width: 767.8px) {
+  .posts {
+    padding-bottom: 60px;
+  }
+}
 .posts__container {
   display: grid;
   grid-gap: 20px;
@@ -1541,4 +1551,41 @@ input:focus {
 .footer__row {
   display: flex;
   justify-content: center;
+  margin: 0 0 60px;
+  position: relative;
+}
+.footer__row::after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 78px;
+  height: 2px;
+  background-color: #637588;
+}
+.footer__link {
+  margin: 0 8px;
+}
+.footer__icon {
+  font-size: 37px;
+  color: #ffffff;
+  transition: color 0.5s;
+}
+.footer__icon:hover {
+  color: #d66926;
+}
+.footer__text {
+  text-align: center;
+  max-width: 160px;
+  margin: 0 auto;
+  letter-spacing: 4.78px;
+  color: #637588;
+  font-weight: 100;
+  line-height: 20px;
+}
+.footer__text span {
+  letter-spacing: 0.8px;
+  font-weight: 700;
+  color: #ffffff;
 }
