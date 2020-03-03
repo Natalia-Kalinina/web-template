@@ -1,5 +1,5 @@
 .about {
-    padding: 80px 0 50px;
+    padding: ($gap * 4) 0 50px;
     background-color: $color-gray-light;
     &__container {
         display: flex;
@@ -30,11 +30,11 @@
             margin-top: -5px;
         }
         @include sm {
-            padding-left: 30px;
+            padding-left: ($gap * 1.5);
             margin-top: -60px;
         }
         @media (max-width: 440px) {
-            padding-left: 10px;
+            padding-left: ($gap / 2);
         }
 }
     &__text {
@@ -63,7 +63,7 @@
             font-size: 1rem;
             letter-spacing: 0.8px;
             padding: 0;
-            margin: 0 0 40px;
+            margin: 0 0 ($gap *2);
             &::after {
                 display: none;
             }

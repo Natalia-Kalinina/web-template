@@ -2,10 +2,10 @@
     padding-bottom: 100px;
 
     @include lg-md {
-      padding-bottom: 80px;
+      padding-bottom: ($gap * 4);
     }
     @include md {
-      padding-bottom: 60px;
+      padding-bottom: ($gap * 3);
     }
     &__container {
         @extend %container;
@@ -43,6 +43,7 @@
               "b5"
               "b6";
           }
+          
     }
     &__link {
         display: flex;
@@ -55,7 +56,7 @@
         max-width: $ul;
         margin: 0 auto 56px;
         padding-left: $gap;
-        padding-top: $gap*5;
+        padding-top: ($gap * 5);
         font-size: 2.5rem;
         line-height: 1.2em;
         letter-spacing: 0.1em;
@@ -139,32 +140,31 @@
         text-align: center;
       }
       &__caption {
-        line-height: 20px;
+        line-height: $gap;
         letter-spacing: 0.9px;
       }
+      &__button {
+        display: flex;
+        justify-content: center;
+        .btn-accent {
+          display: block;
+          margin-top: $gap;
+          width: 350px;
+          height: 60px;
+          border: 2px solid $color-primary;
+          background-color: $color-gray-dark;
+          padding: 18px $gap;
+          text-align: center;
+          font-size: 1.125rem;
+          transition: background-color 0.5s;
+      
+          &:hover {
+            background-color: $color-accent;
+          }
+          @include sm {
+            width: 100%;
+          }
+        }
+      
+      }
 }
-
-.posts__button {
-    display: flex;
-    justify-content: center;
-    .btn-accent {
-      display: block;
-      margin-top: $gap;
-      width: 350px;
-      height: 60px;
-      border: 2px solid $color-primary;
-      background-color: $color-gray-dark;
-      padding: 18px $gap;
-      text-align: center;
-      font-size: 1.125rem;
-      transition: background-color 0.5s;
-  
-      &:hover {
-        background-color: $color-accent;
-      }
-      @include sm {
-        width: 100%;
-      }
-    }
-  
-  }
