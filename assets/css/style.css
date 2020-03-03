@@ -1263,7 +1263,7 @@ input:focus {
 }
 
 .posts {
-  padding: 100px 0;
+  padding-bottom: 100px;
 }
 .posts__container {
   display: grid;
