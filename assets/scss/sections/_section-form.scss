@@ -1,13 +1,10 @@
 .form {
-    padding: ($gap * 1.5) 0;
+    padding: 30px 0;
     background-color: $color-primary;
 
-    @include lg-sm{
+    @include lg {
         padding: $gap 0;
-    }
-    @include sm {
-        padding: $gap 0;
-    }
+      }
     &__form {
         display: flex;
         flex-wrap: wrap;
@@ -22,29 +19,31 @@
         font-weight: bold;
         font-size: 18px;
         letter-spacing: 1.8px;
-
-        @include sm {
-            flex: 0 1 100%;
+        // border-width: 2px;
+        color: $color-light;
+        @include lg-md {
+          font-size: 16px;
+          letter-spacing: 1.6px;
         }
-    }
-    &__item:nth-child(1) {
-        @include md-sm {
+        &:nth-child(1) {
+            @include md-sm {
+                flex: 0 1 100%;
+                margin: 0 0 20px;
+            }
+        }
+        &:nth-child(2),
+        &:nth-child(3) {
+            @include md-sm {
+                flex: 0 1 50%;
+            }
+        }
+        @include sm {
             flex: 0 1 100%;
             margin: 0 0 $gap;
+            &:last-child {
+              margin: 0;
+            }
         }
-    }
-    &__item:nth-child(2),
-    &__item:nth-child(3){
-        @include md-sm {
-            flex-grow: 1;
-        }
-    }
-    &__item:nth-child(1),
-    &__item:nth-child(2) {
-        @include sm {
-            margin: 0 0  $gap;
-        }
-
     }
     &__user-name,
     &__user-email {
@@ -53,30 +52,29 @@
         border-width: 2px;
         background-color: rgba($color-light, 0.05);
         border-color: rgba($color-light, 0) rgba($color-light, 0) rgba($color-light, 0.4);
-
+        letter-spacing: 1.8px;
         &:hover {
-        border-color: rgba($color-light, 0.4) rgba($color-light, 0.4) rgba($color-light, 1);
-        background-color: rgba($color-light, 0.1);
-        transition-duration: 0.5s; 
-        &::placeholder {
-            transition-duration: 0.5s;
-            color: rgba($color-light, 0.6)
-        } 
+            border-color: rgba($color-light, 0.4) rgba($color-light, 0.4) rgba($color-light, 1);
+            background-color: rgba($color-light, 0.1);
+            transition-duration: 0.5s; 
+            &::placeholder {
+                transition-duration: 0.5s;
+                color: rgba($color-light, 0.6)
+            } 
         }
-        
         &::placeholder {
             color: rgba($color-light, 0.3); 
         }
-        
     }
     &__button {
         width: 100%;
         padding: $gap ($gap * 2);
         border-width: 2px;
-        background-color: rgba($color-light, 0.05);
+        background-color: rgba($color-light, 0.1);
         border-color: rgba($color-light, 0) rgba($color-light, 0) rgba($color-light, 0.4);
         border-style: solid;
         color: $color-light;
+        letter-spacing: 1.8px;
         &:hover {
             background-color: $color-accent;
             border-color: $color-light;

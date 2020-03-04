@@ -37,14 +37,10 @@
     flex-wrap: wrap;
     justify-content: center;
     .btn {
-      margin-left: $gap / 2;
-      margin-right: $gap / 2;
       width: 250px;
       height: 60px;
       margin-bottom: 10px;
-      &:last-child {
-        margin-bottom: 0;
-      }
+      margin: 0 ($gap / 2);
 
       @include lg-md {
         width: 200px;
@@ -69,6 +65,9 @@
         padding-bottom: 10px;
         letter-spacing: 0.05em;
         font-size: 1rem;
+        &:last-child {
+          margin-bottom: 0;
+        }
         }
       }
     }

@@ -90,6 +90,7 @@
     justify-content: center;
     align-items: center;
     transition: 0.5s;
+    font-size: 1.25rem;
   }
 
   &:hover {
@@ -147,10 +148,9 @@
     display: block;
     margin-top: $gap;
     width: 350px;
-    height: 60px;
     border: 2px solid $color-primary;
-    background-color: $color-gray-dark;
-    padding: 18px $gap;
+    background-color: rgba($color-primary, 0.8);
+    padding: 20px $gap;
     text-align: center;
     font-size: 1.125rem;
     transition: background-color 0.5s;
