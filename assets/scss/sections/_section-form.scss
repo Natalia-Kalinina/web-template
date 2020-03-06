@@ -21,6 +21,7 @@
         letter-spacing: 1.8px;
         // border-width: 2px;
         color: $color-light;
+
         @include lg-md {
           font-size: 16px;
           letter-spacing: 1.6px;
@@ -48,30 +49,34 @@
     &__user-name,
     &__user-email {
         width: 100%;
-        padding: $gap ($gap * 2);
+        padding: 19px 33px;
         border-width: 2px;
         background-color: rgba($color-light, 0.05);
-        border-color: rgba($color-light, 0) rgba($color-light, 0) rgba($color-light, 0.4);
+        border-color: rgba($color-light, 0) rgba($color-light, 0) rgba($color-light, 0.1);
         letter-spacing: 1.8px;
         &:hover {
-            border-color: rgba($color-light, 0.4) rgba($color-light, 0.4) rgba($color-light, 1);
-            background-color: rgba($color-light, 0.1);
+            border-color: rgba($color-light, 0.1) rgba($color-light, 0.1) $color-light;
+            background-color: rgba($color-light, 0.15);
             transition-duration: 0.5s; 
             &::placeholder {
                 transition-duration: 0.5s;
-                color: rgba($color-light, 0.6)
+                color: $color-light;
             } 
         }
         &::placeholder {
-            color: rgba($color-light, 0.3); 
+            color: $color-gray; 
+        }
+
+        @include lg {
+            padding: 19px 21px;
         }
     }
     &__button {
         width: 100%;
-        padding: $gap ($gap * 2);
+        padding: 19px 33px;
         border-width: 2px;
         background-color: rgba($color-light, 0.1);
-        border-color: rgba($color-light, 0) rgba($color-light, 0) rgba($color-light, 0.4);
+        border-color: rgba($color-light, 0) rgba($color-light, 0) rgba($color-light, 0.25);
         border-style: solid;
         color: $color-light;
         letter-spacing: 1.8px;
@@ -80,5 +85,8 @@
             border-color: $color-light;
             transition-duration: 0.5s;  
           }
+          @include lg {
+            padding: 19px 21px;
+        }
     }
 }

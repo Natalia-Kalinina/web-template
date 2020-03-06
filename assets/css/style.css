@@ -677,7 +677,7 @@ input:focus {
 @media (max-width: 767.8px) and (min-width: 576px) {
   .header-content__title {
     font-size: 1.875rem;
-    margin: 0 0 43px;
+    margin: 0 0 32px;
   }
 }
 @media (max-width: 575.8px) {
@@ -736,6 +736,11 @@ input:focus {
     margin-bottom: 0;
   }
 }
+@media (max-width: 440px) {
+  .header-content__buttons .btn:first-child {
+    margin-bottom: 10px;
+  }
+}
 
 .skills {
   padding: 10px 10px 40px;
@@ -769,6 +774,7 @@ input:focus {
 }
 @media (max-width: 575.8px) {
   .skills__container {
+    grid-gap: 20px;
     grid-template-columns: repeat(1, 1fr);
     grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
   }
@@ -819,6 +825,11 @@ input:focus {
   align-items: center;
   transition: 0.5s;
   font-size: 1.25rem;
+}
+@media (max-width: 767.8px) {
+  .skill-item__link {
+    font-size: 1.125rem;
+  }
 }
 .skill-item:hover .skill-item__overlay {
   opacity: 0.95 !important;
@@ -1046,6 +1057,8 @@ input:focus {
   background-color: rgba(45, 54, 81, 0.8);
   padding: 20px 20px;
   text-align: center;
+  letter-spacing: 1.8px;
+  font-weight: 400;
   font-size: 1.125rem;
   transition: background-color 0.5s;
 }
@@ -1061,6 +1074,16 @@ input:focus {
 .about {
   padding: 0 0 60px;
   background-color: #e5e5e5;
+}
+@media (max-width: 991.8px) and (min-width: 768px) {
+  .about {
+    padding: 0 0 29px;
+  }
+}
+@media (max-width: 767.8px) and (min-width: 576px) {
+  .about {
+    padding: 0 0 18px;
+  }
 }
 .about__container {
   display: flex;
@@ -1126,6 +1149,7 @@ input:focus {
 @media (max-width: 991.8px) and (min-width: 768px) {
   .about__text p:nth-child(4) {
     display: none;
+    padding: 0 24px 0 0;
   }
 }
 @media (max-width: 767.8px) and (min-width: 576px) {
@@ -1177,7 +1201,7 @@ input:focus {
 }
 @media (max-width: 991.8px) and (min-width: 768px) {
   .about__text {
-    padding: 0 24px 0 0;
+    padding: 0 14px 0 0;
   }
 }
 @media (max-width: 767.8px) {
@@ -1284,30 +1308,35 @@ input:focus {
 }
 .form__user-name, .form__user-email {
   width: 100%;
-  padding: 20px 40px;
+  padding: 19px 33px;
   border-width: 2px;
   background-color: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) rgba(255, 255, 255, 0.4);
+  border-color: rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) rgba(255, 255, 255, 0.1);
   letter-spacing: 1.8px;
 }
 .form__user-name:hover, .form__user-email:hover {
-  border-color: rgba(255, 255, 255, 0.4) rgba(255, 255, 255, 0.4) white;
-  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.1) rgba(255, 255, 255, 0.1) #ffffff;
+  background-color: rgba(255, 255, 255, 0.15);
   transition-duration: 0.5s;
 }
 .form__user-name:hover::placeholder, .form__user-email:hover::placeholder {
   transition-duration: 0.5s;
-  color: rgba(255, 255, 255, 0.6);
+  color: #ffffff;
 }
 .form__user-name::placeholder, .form__user-email::placeholder {
-  color: rgba(255, 255, 255, 0.3);
+  color: #637588;
+}
+@media (max-width: 991.8px) {
+  .form__user-name, .form__user-email {
+    padding: 19px 21px;
+  }
 }
 .form__button {
   width: 100%;
-  padding: 20px 40px;
+  padding: 19px 33px;
   border-width: 2px;
   background-color: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) rgba(255, 255, 255, 0.4);
+  border-color: rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) rgba(255, 255, 255, 0.25);
   border-style: solid;
   color: #ffffff;
   letter-spacing: 1.8px;
@@ -1316,6 +1345,11 @@ input:focus {
   background-color: #d66926;
   border-color: #ffffff;
   transition-duration: 0.5s;
+}
+@media (max-width: 991.8px) {
+  .form__button {
+    padding: 19px 21px;
+  }
 }
 
 .posts {
@@ -1382,7 +1416,7 @@ input:focus {
 }
 @media (max-width: 767.8px) and (min-width: 576px) {
   .posts__main-title {
-    margin-bottom: 36px;
+    margin-bottom: 34px;
     font-size: 1.5rem;
   }
 }
@@ -1390,14 +1424,13 @@ input:focus {
   .posts__main-title {
     margin-bottom: 36px;
     text-align: center;
-    padding-top: 50px;
     letter-spacing: 2.4px;
     font-size: 24px;
   }
 }
 .posts__title {
   font-family: "Roboto Slab", serif;
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   font-weight: 700;
   letter-spacing: 0.9px;
   line-height: 20px;
@@ -1597,6 +1630,8 @@ input:focus {
 @media (max-width: 575.8px) {
   .posts__button .btn-accent {
     width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 }
 
