@@ -1313,6 +1313,7 @@ input:focus {
   background-color: rgba(255, 255, 255, 0.05);
   border-color: rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) rgba(255, 255, 255, 0.1);
   letter-spacing: 1.8px;
+  color: #ffffff;
 }
 .form__user-name:hover, .form__user-email:hover {
   border-color: rgba(255, 255, 255, 0.1) rgba(255, 255, 255, 0.1) #ffffff;
@@ -1368,6 +1369,7 @@ input:focus {
 .posts__container {
   display: grid;
   grid-gap: 20px;
+  padding-bottom: 20px;
 }
 @media (min-width: 992px) {
   .posts__container {
@@ -1394,10 +1396,9 @@ input:focus {
   }
 }
 .posts__link {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+  display: grid;
   height: 100%;
+  grid-template-rows: 300px 1fr;
   color: inherit;
 }
 .posts__main-title {
@@ -1436,8 +1437,7 @@ input:focus {
   line-height: 20px;
 }
 .posts__item {
-  background-color: #e5e5e5;
-  min-height: 550px;
+  background-color: #f2f2f2;
   color: #637588;
 }
 .posts__item:nth-of-type(1) {
@@ -1595,18 +1595,19 @@ input:focus {
   transition: transform 0.5s;
 }
 .posts__content {
-  padding: 10px 20px;
-  flex: 1 0 250px;
+  padding: 20px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
 }
 .posts__caption {
+  padding: 20px 0;
   line-height: 20px;
-  line-height: 20px;
-  letter-spacing: 0.9px;
+  line-height: 1.15;
+  letter-spacing: 0.1px;
   font-family: "Roboto", sans-serif;
+  font-size: 16px;
 }
 
 .posts__button {
